@@ -1,12 +1,16 @@
 {
   "name": "react-select-us-states",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React HTML Select component for US State Selection",
   "main": "build/index.js",
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrohidalgo/react-select-us-states.git"
   },
   "scripts": {
     "test": "jest",
