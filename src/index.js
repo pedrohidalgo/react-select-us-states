@@ -1,22 +1,22 @@
-import React from 'react';
-import states from './states.json';
-import PropTypes from 'prop-types';
+import React from "react";
+import states from "./states.json";
+import PropTypes from "prop-types";
 
 class SelectUSState extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this._handleChange = this._handleChange.bind(this);
-  }
-
-  _handleChange(event) {
-    this.props.onChange(event.target.value);
-  }
+  handleChange = event => {
+    const { onChange } = this.props;
+    onChange(event.target.value);
+  };
 
   render() {
+    const { id, className } = this.props;
     return (
-      <select id={this.props.id} className={this.props.className} onChange={this._handleChange}>
-        {states.map(item => <option key={item.abbreviation} value={item.abbreviation}>{item.name}</option>)}
+      <select id={id} className={className} onChange={this.handleChange}>
+        {states.map(item => (
+          <option key={item.abbreviation} value={item.abbreviation}>
+            {item.name}
+          </option>
+        ))}
       </select>
     );
   }
@@ -25,7 +25,7 @@ class SelectUSState extends React.Component {
 const propTypes = {
   id: PropTypes.string,
   onChange: PropTypes.func,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 SelectUSState.propTypes = propTypes;
