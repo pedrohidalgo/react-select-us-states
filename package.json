@@ -1,6 +1,6 @@
 {
   "name": "react-select-us-states",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "React HTML Select component for US State Selection",
   "main": "build/index.js",
   "dependencies": {

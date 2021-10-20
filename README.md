@@ -44,3 +44,21 @@ class App extends Component {
 export default App;
 
 ```
+
+## Controlled element Usage
+
+```javascript
+// with name and placeholder
+<SelectUSState
+    name="us_state"
+    value={this.state.us_state}
+    className="myClassName"
+    placeholder="- Select US State -"
+    onChange={(new_state_abbr, field_name) => this.setState({ [field_name]: new_state_abbr })} />
+
+// with no placeholder defaults to alabama
+// with no name, only value is provided
+<SelectUSState
+    value={this.state.us_state}
+    onChange={(new_state_abbr) => this.setState({ us_state: new_state_abbr })} />
+```
